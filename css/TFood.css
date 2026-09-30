@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+:root {
+    /* ---------------------------------------------------------------- */
+    /* 綠色為主、咖啡色為輔的低飽和雙色風格配色變數設定 */
+    /* ---------------------------------------------------------------- */
+    --color-page-bg: #edf2eb;         /* 網頁整體背景色 (極淡柔和低飽和綠色) */
+    --color-content-bg: #ffffff;      /* 內容區塊背景色 (純淨白) */
+    --color-nav-bg: #d7e2d3;          /* 導覽列背景色 (質感粉綠咖) */
+    --color-footer-bg: #2d3829;       /* 頁尾背景色 (沉穩深墨草綠色) */
+
+    --color-btn-bg: #5a7352;          /* 按鈕與連結預設背景色 (低飽和莫蘭迪綠) */
+    --color-btn-text: #ffffff;        /* 按鈕文字顏色 (純白) */
+
+    --color-btn-hover-bg: #475d41;    /* 按鈕滑鼠懸停背景色 (深暗綠色) */
+    --color-btn-hover-text: #f4f6f0;  /* 按鈕滑鼠懸停文字顏色 */
+
+    --color-heading: #594f49;         /* 一般主標題/內文標題顏色 (溫潤質感咖啡色) */
+    --color-text: #4e4641;            /* 內文文字顏色 (深咖啡灰調) */
+
+    /* 網頁大標題專用顏色（指定為綠色） */
+    --color-page-title: #425c3c;      /* 網頁大標題顏色 (低飽和深草綠色) */
+
+    /* 雙色風格專用元件參數設定 */
+    --color-banner-bg: #f4f7f2;       /* 列表卡片底色 (極淡綠白微咖) */
+    --color-banner-border: #ccd8c7;   /* 列表卡片邊框 (柔和綠咖邊框) */
+    --color-logo-bg: #c2d0bc;         /* Logo 佔位區背景色 (柔和霧面灰綠色) */
+    
+    --color-shadow: rgba(66, 92, 60, 0.08);         /* 帶有綠意調性的柔和陰影 */
+    --color-hover-shadow: rgba(90, 115, 82, 0.2);   /* 懸停時的綠色光暈陰影 */
+
+    /* ---------------------------------------------------------------- */
+    /* 字體配置變數設定 */
+    /* ---------------------------------------------------------------- */
+    --font-family-title: "Noto Serif TC", "Songti TC", serif; /* 網頁/區塊標題字體 (人文襯線體) */
+    --font-family-base: "Noto Sans TC", sans-serif;           /* 內文通用字體 (清爽無襯線體) */
+}
