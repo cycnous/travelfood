@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zw-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        /* CSS */
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <p class="title01" id="demo01">JavaScript練習</p>
+    <p class="title01" id="demo02">JavaScript練習</p>
+    <p class="title01" id="demo03">JavaScript練習</p>
+    <p class="title01" id="demo04">JavaScript練習</p>
+    <p class="title01" id="demo05">JavaScript練習</p>
+
+    <div id="demo06"></div>
+    <div id="demo07"></div>
+    <div id="demo08"></div>
+
+    <div id="demo09">
+        <!-- 顯示陣列 序號:內容 -->
+        <!-- <p class="title03"> 0: Mon</p> -->
+    </div>
+
+    <div id="demo10">
+        <!-- 依序顯示每個人的資本資料:編號1,姓名,年齡,居住地,職業 -->
+        <!-- <p class="title02"> [0] name: Amy, age: 18, city: Taichung, occupation: Student </p> -->
+    </div>
+
+    <script src="js/jquery-4.0.0.js"></script>
+    <script>
+        // JavaScript原生語法
+        document.getElementById("demo01").innerHTML = ("Hello World!");
+        document.getElementById("demo02").innerHTML = ("HELLO WORLD!");
+
+        // JQuery
+        $("#demo03").html("Hello Jquery!");
+        $("#demo04").html("用#呼叫id / 用.呼叫class");
+
+        // 常用語法
+        console.log("console:紀錄變數&測試用,不會顯示在畫面");
+
+        console.log('--- For 迴圈 ---');
+        for (i = 1; i <= 10; i++) {
+            console.log(i + " hello!");
+        }
+
+        // for (i = 1; i < 10; i++) {
+        //     for (j = 1; j < 10; j++) {
+        //         console.log(i + " X " + j + " = " + i * j);
+        //     }
+        // }
+
+        for (i = 0; i < 5; i++) {
+            $("#demo06").append('<p class = "title03">HELLO FOR</p>');
+        }
+
+        $("#demo06").append('<p class = "title02">Hello Hello</p>');
+
+        for (i = 0; i < 4; i++) {
+            $("#demo07").append('<img src="images/Film/film02.avif" width="250px" alt="">')
+        }
+
+        // 陣列 Array
+        console.log('--- Array 陣列 ---');
+        const week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+        console.log(week);
+        console.log(week[0]);
+        console.log(week[1]);
+        console.log(week[2]);
+
+        console.log('--- Array + For ---');
+        console.log('// array.length: 陣列個數')
+        for (i = 0; i < week.length; i++) {
+            $("#demo08").append(console.log(week[i]))
+        }
+
+        // ForEach 迴圈
+        console.log('--- Array + ForEach ---');
+        console.log('// array.forEach(function(item:參數){事件內容})')
+        console.log('// For & ForEach 功能相同,但Foreach較簡略,故多用ForEach')
+        console.log('// index 索引值: 陣列中的物件序號')
+        week.forEach(function (item, index) {
+            console.log(index);
+            console.log(item);
+        });
+
+        $("#demo09").append('<p class = "title02">append()內可用+號串聯字串跟參數</p>')
+        week.forEach(function (item, index) {
+            $("#demo09").append('<p class = "title04">' + index + ': ' + item + '</p>');
+        });
+
+        // JSON: array[ object, object, object ]
+        const people = [
+            {
+                "name"       : "Amy",
+                "age"        : 18,
+                "city"       : "Taichung",
+                "gender"     : "Female",
+                "occupation" : "Student",
+                "hobby"      : "Reading"
+            },
+            {
+                "name"       : "Eric",
+                "age"        : 24,
+                "city"       : "Paris",
+                "gender"     : "Male",
+                "occupation" : "Designer",
+                "hobby"      : "Photography"
+            },
+            {
+                "name"       : "John",
+                "age"        : 21,
+                "city"       : "New York",
+                "gender"     : "Male",
+                "occupation" : "Engineer",
+                "hobby"      : "Gaming"
+            },
+            {
+                "name"       : "Sophia",
+                "age"        : 29,
+                "city"       : "Tokyo",
+                "gender"     : "Female",
+                "occupation" : "Chef",
+                "hobby"      : "Cooking"
+            },
+            {
+                "name"       : "Liam",
+                "age"        : 32,
+                "city"       : "London",
+                "gender"     : "Male",
+                "occupation" : "Architect",
+                "hobby"      : "Drawing"
+            },
+            {
+                "name"       : "Emma",
+                "age"        : 26,
+                "city"       : "Sydney",
+                "gender"     : "Female",
+                "occupation" : "Nurse",
+                "hobby"      : "Yoga"
+            },
+            {
+                "name"       : "Alex",
+                "age"        : 30,
+                "city"       : "Taipei",
+                "gender"     : "Male",
+                "occupation" : "Marketing Specialist",
+                "hobby"      : "Hiking"
+            },
+            {
+                "name"       : "Hannah",
+                "age"        : 22,
+                "city"       : "Berlin",
+                "gender"     : "Female",
+                "occupation" : "Musician",
+                "hobby"      : "Guitar"
+            },
+            {
+                "name"       : "Michael",
+                "age"        : 27,
+                "city"       : "Toronto",
+                "gender"     : "Male",
+                "occupation" : "Data Analyst",
+                "hobby"      : "Basketball"
+            },
+            {
+                "name"       : "Chloe",
+                "age"        : 25,
+                "city"       : "Seoul",
+                "gender"     : "Female",
+                "occupation" : "Translator",
+                "hobby"      : "Traveling"
+            }
+        ];
+        console.log('--- JSON格式 ---')
+        console.log('// JSON: array = [object, object, ...]')
+        console.log(people);
+
+        console.log('--- JSON + ForEach 顯示特定欄位 ---')
+        people.forEach(function(item, index){
+            console.log(index, item.name, item.age);
+        });
+
+        $("#demo10").append('<p class="title02"> --- JSON --- </p>');
+        people.forEach(function(item, index){
+            index++;
+            $("#demo10").append('<p class="title04">' + '[' + index + '] name: ' + item.name + ', age: ' + item.age + ', city: ' + item.city + ', occupation: '+ item.occupation + ' </p>');
+        });
+
+    </script>
+</body>
+
+</html>

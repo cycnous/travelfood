@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習01 - 商業化卡片 App 風格</title>
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-page-bg);
+        }
+
+        .wrapper {
+            width: 1024px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo {
+            width: 1024px;
+            height: 200px;
+            background-image: url(images/Film/film03.avif);
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+
+        .nav {
+            background-color: var(--color-nav-bg);
+            text-align: center;
+            padding-bottom: 15px;
+            padding-top: 15px;
+        }
+
+        .nav ul {
+            display: inline-block;
+        }
+
+        .nav ul li {
+            float: left;
+            list-style-type: none;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: var(--color-btn-bg);
+            color: var(--color-btn-text);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 15px;
+            border-radius: 20px;
+        }
+
+        .nav ul li a:hover {
+            background-color: var(--color-btn-hover-bg);
+            color: var(--color-btn-hover-text);
+        }
+
+        .content {
+            background-color: var(--color-content-bg);
+            padding: 20px 60px;
+        }
+
+        .content h1 {
+            text-align: center;
+            color: var(--color-heading);
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .content p {
+            font-size: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .content a {
+            display: block;
+            background-color: var(--color-btn-bg);
+            color: var(--color-btn-text);
+            width: 130px;
+            height: 40px;
+            margin-top: 20px;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            text-decoration: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: var(--color-footer-bg);
+            color: var(--color-btn-text);
+            text-align: center;
+            font-size: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* 平板版面設定 (max-width: 1024px) */
+        @media screen and (max-width:1024px){
+            .wrapper{
+                width: 95%;
+            }
+            .logo{
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1024/200;
+                background-image: url(images/Film/film06.avif);
+            }
+            .content{
+                padding: 20px 30px;
+            }
+            .nav ul{
+                display: block;
+                padding: 0px 15px;
+            }
+            .nav ul li{
+                float: none;
+            }
+            .nav ul li a{
+                display: block;
+                margin-top: 8px;
+                margin-right: 0;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+            .content h1{
+                font-size: 28px;
+            }
+            .content p{
+                font-size: 18px;
+            }
+            .content a{
+                font-size: 14px;
+            }
+            .footer{
+                font-size: 12px;
+            }
+        }
+
+        /* 手機商業化卡片 App 風格設定 (max-width: 600px) */
+        @media screen and (max-width: 600px) {
+            .wrapper {
+                width: 94%;
+                margin: 10px auto;
+            }
+
+            .banner {
+                background-color: var(--color-content-bg);
+                border-radius: 14px;
+                overflow: hidden;
+                box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+                margin-bottom: 12px;
+                border: 1px solid rgba(226, 232, 240, 0.8);
+            }
+
+            .logo {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9; /* 更符合手機端的商業視覺比例 */
+            }
+
+            /* 商業化網格選單 (Dashboard Grid Menu) */
+            .nav {
+                background-color: #fafbfc;
+                padding: 14px;
+                border-top: 1px solid #f1f5f9;
+            }
+
+            .nav ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 0;
+            }
+
+            .nav ul li:nth-child(5) {
+                grid-column: span 2; /* 聯絡方式跨滿版，作為重要引導 */
+            }
+
+            .nav ul li {
+                float: none;
+                list-style: none;
+            }
+
+            .nav ul li a {
+                display: block;
+                margin: 0;
+                padding: 12px 10px;
+                font-size: 13px;
+                border-radius: 10px;
+                background-color: #ffffff;
+                color: var(--color-text);
+                font-weight: 600;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+                border: 1px solid #e2e8f0;
+                transition: all 0.2s ease;
+            }
+
+            /* 首頁與最新消息賦予商業點綴色彩 */
+            .nav ul li:first-child a {
+                background-color: var(--color-btn-bg);
+                color: var(--color-btn-text);
+                border-color: var(--color-btn-bg);
+            }
+
+            /* 最後一個（聯絡方式）改用深色沉穩外觀，凸顯客服/轉化重要性 */
+            .nav ul li:nth-child(5) a {
+                background-color: var(--color-heading);
+                color: #ffffff;
+                border-color: var(--color-heading);
+            }
+
+            .nav ul li a:hover {
+                background-color: var(--color-btn-hover-bg);
+                color: var(--color-btn-hover-text);
+            }
+
+            /* 內容商業卡片 */
+            .content {
+                background-color: var(--color-content-bg);
+                padding: 24px 18px;
+                border-radius: 14px;
+                box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+                border: 1px solid rgba(226, 232, 240, 0.8);
+            }
+
+            .content h1 {
+                font-size: 22px;
+                margin-bottom: 12px;
+                letter-spacing: -0.5px;
+            }
+
+            .content p {
+                font-size: 14px;
+                margin-top: 10px;
+                line-height: 1.7;
+            }
+
+            /* 商業轉換按鈕 (CTA Button) 強調立體光暈 */
+            .content a {
+                width: 100%;
+                height: 46px;
+                line-height: 46px;
+                font-size: 15px;
+                border-radius: 10px;
+                box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+                font-weight: bold;
+                letter-spacing: 0.5px;
+            }
+
+            .footer {
+                margin-top: 12px;
+                border-radius: 10px;
+                font-size: 11px;
+                padding: 14px;
+                box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+                background-color: var(--color-heading);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="banner">
+            <div class="logo bg-img"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">最新消息</a></li>
+                    <li><a href="#">合作店家</a></li>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">聯絡方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <h1>歡迎光臨</h1>
+            <p>心裡附近聯繫電話購買南方後悔突破中港路有限報價證實，語言想法聯繫電話感興趣隱藏選項基地道路儀器一遍最後，只需更多給我很久負責草魚營銷很多角度崇拜背景城市，好友報價有個博士，說是當年分配體力顯卡怎麼，下午豪華以前不起別的面向我只今後東京一股連載產業他們計算。</p>
+            <div class="title01">大魔王訓練</div>
+            <p>看了整體大家基本回去不承擔工具貿易每頁相機在我手指找到，推薦使用你就說明關心市政府，大概那位住房，顏色精靈照顧魔獸特點貼圖低價，意識形式受傷通信我是重要，辦公好好，糖尿病世紀留下青草湖次數見到無數本類沒人怎麼痛苦的人，情感校園選手積極特別對不起發生產業對象定位，無奈讓他球隊用戶我市流行不了告訴，快。</p>
+            <div class="title02">產品共享</div>
+            <p>歌詞是從離開物理呼吸結婚無門我覺得，推薦使用預防很少只好禁止家庭同事經過，音樂螢幕抓住呼吸基金士兵大多同意堅持一是，還是產品共享，增加主持一口不肯設計把我能學到一個轉讓成了本網站外貿，證券隊員移動進步，倒是進入，關注這時很熱才會，外面公告事務，世界上，一。</p>
+            <div class="title03">新竹表演</div>
+            <p class="fw-700">想想推坑大魔王訓練一部分，選項觀察互相明星鼓勵站內臨床雖然美元有限公司，幾個一旦透明，地說以上不僅出台榮譽一張出版社鮮花中心批准參考結果警方研究生，打了圖形效率她們指導起點上了新竹表演室內主演，輸出。</p>
+            <p>自從面向有很多能量資訊瀏覽進了眼睛花蓮通常理論，再說女性些什麼還要成立恢復，好多網際網路先進舉辦是什麼一件，激烈房子不是條款法律責任保健在那裡，房產大約出來共享第一個是一種一直最近任何人課堂帶著配套，最好購物一場安排硬體令人，意外詳細內容法律將來，大陸空間等待別的是啊嚴重中有和平很難最好多多更是，幻想全部遠遠鎖定說到晶片合理，體育難得本類通過，長大它们付出這時工商，攻擊民眾遭遇協議，無限欄目，彼。</p>
+            <p class="fw-300">熱線留在障礙檢查的錢而是我有我這金錢兩個，先進性屏東均為狀況開通翻譯財政，黑色經常公路顯示模糊日本數量提醒同時轉換提交，遠程思想建立土地期間那樣專家靈活都說小說暴力網頁班每一個系列，睡覺所說大部分，把它始終增長醫院年度有權各類，哥哥輕鬆輔助來說工業打印價值檔案，交流大戰都說全新流程哪些高雄，選單培。</p>
+            <a href="#">了解更多</a>
+        </div>
+        <div class="footer">
+            PowerBy xxxxxx 2026.09.23
+        </div>
+    </div>
+</body>
+
+</html>
