@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap CH7 Flex</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+
+    <style>
+        .box01 {
+            height: 120px;
+            line-height: 120px;
+            border: 4px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-2">
+        <div class="title01">CH7. Flex</div>
+
+        <div class="display-6 fw-400">1. flex-row</div>
+        <div class="row flex-row">
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">2. flex-row-reverse</div>
+        <div class="row flex-row-reverse">
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">3. flex-column</div>
+        <div class="row flex-column">
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">4. flex-column-reverse</div>
+        <div class="row flex-column-reverse">
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-success display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+        
+        <div class="display-6 fw-400 mt-3">5-1.justify-content-start: 預設值，對齊主軸線左邊</div>
+        <div class="row justify-content-start">
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        
+        <div class="display-6 fw-400 mt-3">5-2.justify-content-center: 對齊主軸線中央</div>
+        <div class="row justify-content-center">
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        
+        <div class="display-6 fw-400 mt-3">5-3.justify-content-end: 對齊主軸線右邊</div>
+        <div class="row justify-content-end">
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">5-4.justify-content-around: 平均分配寬度和間距</div>
+        <div class="row justify-content-around">
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">5-5.justify-content-between: 平均分配寬度，第一項和最後一項貼齊邊緣</div>
+        <div class="row justify-content-between">
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-warning display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+
+        <div class="display-6 fw-400 mt-3">6-1.align-items-start/center/end</div>
+        <div class="row flex-column align-items-center">
+            <div class="col-3">
+                <div class="box01 bg-primary display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-primary display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-3">
+                <div class="box01 bg-primary display-2 text-center fw-600">03</div>
+            </div>
+        </div>
+        
+        <div class="display-6 fw-400 mt-3">6-2.align-self-start/center/end</div>
+        <div class="row mt-3 flex-column">
+            <div class="col-2 align-self-start">
+                <div class="box01 bg-primary display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2 align-self-center">
+                <div class="box01 bg-primary display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2 align-self-end">
+                <div class="box01 bg-primary display-2 text-center fw-600">03</div>
+            </div>
+            <div class="col-2 align-self-center">
+                <div class="box01 bg-primary display-2 text-center fw-600">04</div>
+            </div>
+            <div class="col-2">
+                <div class="box01 bg-primary display-2 text-center fw-600">05</div>
+            </div>
+        </div>
+        
+        <div class="display-6 fw-400 mt-3">7. order</div>
+        <div class="row flex-row">
+            <div class="col-2 order-0">
+                <div class="box01 bg-secondary display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2 order-1">
+                <div class="box01 bg-secondary display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2 order-5">
+                <div class="box01 bg-secondary display-2 text-center fw-600">03</div>
+            </div>
+            <div class="col-2 order-3">
+                <div class="box01 bg-secondary display-2 text-center fw-600">04</div>
+            </div>
+            <div class="col-2 order-2">
+                <div class="box01 bg-secondary display-2 text-center fw-600">05</div>
+            </div>
+            <div class="col-2 order-4">
+                <div class="box01 bg-secondary display-2 text-center fw-600">06</div>
+            </div>
+        </div>
+        
+        <div class="display-6 fw-400 mt-3">Practice - order</div>
+        <div class="row flex-row">
+            <!-- 隨著螢幕調整順序: 12345 > 51234 > 45123 > 34512 > 23451   -->
+            <div class="col-2 order-sm-1 order-md-2 order-lg-3 order-xl-4 order-xxl-0">
+                <div class="box01 bg-danger display-2 text-center fw-600">01</div>
+            </div>
+            <div class="col-2 order-sm-2 order-md-3 order-lg-4 order-xl-0 order-xxl-1">
+                <div class="box01 bg-warning display-2 text-center fw-600">02</div>
+            </div>
+            <div class="col-2 order-sm-3 order-md-4 order-lg-0 order-xl-1 order-xxl-2">
+                <div class="box01 bg-info display-2 text-center fw-600">03</div>
+            </div>
+            <div class="col-2 order-sm-4 order-md-0 order-lg-1 order-xl-2 order-xxl-3">
+                <div class="box01 bg-success display-2 text-center fw-600">04</div>
+            </div>
+            <div class="col-2 order-sm-0 order-md-1 order-lg-2 order-xl-3 order-xxl-4">
+                <div class="box01 bg-primary display-2 text-center fw-600">05</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

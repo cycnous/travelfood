@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH6 切版練習2 ver2</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <style>
+        .logo {
+            height: 160px;
+            background-image: url(images/Film/film08.avif);
+        }
+
+        .menu {
+            height: 120px;
+            /* 垂直置中: line-height = height */
+            line-height: 120px;
+        }
+
+        .text{
+            border: 2px solid #43857a;
+            padding: 3%;
+            border-radius: 2%;
+        }
+
+        /* menu: 當螢幕>=992/1200px 要變圓形 */
+        @media screen and (min-width:992px) {
+            .menu {
+                width: 180px;
+                height: 180px;
+                line-height: 180px;
+                border-radius: 50%;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .menu {
+                width: 220px;
+                height: 220px;
+                line-height: 220px;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-2">
+        <div class="row">
+            <div class="col-12 d-none d-sm-block">
+                <div class="logo bg-img"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-3 mt-3">
+                <div class="menu bg-success h2 fw-600 text-center">選單01</div>
+            </div>
+            <div class="col-sm-6 col-md-3 mt-3">
+                <div class="menu bg-success h2 fw-600 text-center">選單02</div>
+            </div>
+            <div class="col-sm-6 col-md-3 mt-3">
+                <div class="menu bg-success h2 fw-600 text-center">選單03</div>
+            </div>
+            <div class="col-sm-6 col-md-3 mt-3">
+                <div class="menu bg-success h2 fw-600 text-center">選單04</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <!-- 在 Bootstrap 中，.img-fluid 用來建立響應式圖片（Responsive images）
+                    • CSS 樣式：會自動為圖片套用 max-width: 100% 與 height: auto。
+                    • 縮放效果：圖片會隨著其父元素的寬度自動縮放，避免圖片超出容器或變形。 -->
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mt-3">
+                <div class="text">
+                    <img src="images/Film/film05.avif" class="img-fluid" alt="">
+                    <div class="h4 mt-2 text-center">旅遊景點介紹</div>
+                    <p>培養責任編輯一個，做什麼重視實驗一條值得知名，協會文件大小，上路我在正好技術可用足球，需要出席，支付必要行動產權不可能順利歡迎，包裝不行站內處理器不足，流程裝備編輯食品，站長智能我覺得謝謝解決高中權限反覆相關圖片走勢財產同時，感覺到隱藏之家，網上困難，簽。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-none d-md-block bg-secondary py-2 text-center mt-3">POWER BY XXXXXX 2026.10</div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
